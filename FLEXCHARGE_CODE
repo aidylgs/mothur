@@ -1,0 +1,20 @@
+#include <Servo.h>
+Servo servo1, servo2, servo3, servo4;
+int servo1Speed = 50;  
+int servo2Speed = 50;
+int servo3Speed = 50;
+int servo4Speed = 50;
+void setup() {
+  servo1.attach(9);    
+  servo2.attach(10);   
+  servo3.attach(11);   
+  servo4.attach(12);   
+}
+void loop() {
+  // Rotate servos in one direction
+  servo1.writeMicroseconds(1500 + servo1Speed * 5);  
+  servo2.writeMicroseconds(1500 + servo2Speed * 5);
+  servo3.writeMicroseconds(1500 + servo3Speed * 5);
+  servo4.writeMicroseconds(1500 + servo4Speed * 5);
+  delay(1000);
+}
